@@ -79,6 +79,8 @@ const byte ip[] = {192, 168, 1, 99};
 const byte mac[] = {0xDE, 0xED, 0xBA, 0xFE, 0x54, 0x95}; //W5100 ethernet shield mac adress
 #endif
 
+//#define ESP32_ETHERNET=true // Uncomment to use Ethernet module on OLIMEX ESP32 Ethernet gateway
+
 #if defined(ESPWifiManualSetup) // for nodemcu, weemos and esp8266
 #  ifndef wifi_ssid
 #    define wifi_ssid "wifi ssid"
@@ -225,10 +227,11 @@ uint8_t wifiProtocol = 0; // default mode, automatic selection
 //#define ZsensorGPIOKeyCode "GPIOKeyCode" //ESP8266, Arduino, ESP32
 //#define ZsensorGPIOInput "GPIOInput" //ESP8266, Arduino, ESP32
 //#define ZmqttDiscovery "HADiscovery"//ESP8266, Arduino, ESP32, Sonoff RF Bridge
-//#define ZactuatorFASTLED "FASTLED"  //ESP8266, Arduino, ESP32, Sonoff RF Bridge
+//#define ZactuatorFASTLED "FASTLED" //ESP8266, Arduino, ESP32, Sonoff RF Bridge
 //#define ZboardM5STICKC "M5StickC"
-//#define ZboardM5STACK "ZboardM5STACK"
-//#define ZradioCC1101  "CC1101" //ESP8266, ESP32
+//#define ZboardM5STACK  "ZboardM5STACK"
+//#define ZradioCC1101   "CC1101"   //ESP8266, ESP32
+//#define ZactuatorPWM   "PWM"      //ESP8266, ESP32
 
 /*-------------DEFINE YOUR MQTT ADVANCED PARAMETERS BELOW----------------*/
 #ifndef version_Topic
